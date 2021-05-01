@@ -1,1 +1,88 @@
-<h1 class="text-center mt-4">Signup</h1>
+<div class="container">
+  <h2 class="ui center aligned large header">
+    Welcome to MessageMe - <em>Sign up to get started!</em>
+  </h2>
+
+  <%= form_with(model: @user, class: "shadow p-3 mb-3 bg-info rounded", local: true) do |f| %>
+    <div class="form-group row">
+      <%= f.label :username, class: "col-2 col-form-label text-light" %>
+      <div class="col-10">
+        <%= f.text_field :username, class: "form-control shadow rounded", placeholder: "Enter a username" %>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <%= f.label :password, class: "col-2 col-form-label text-light" %>
+      <div class="col-10">
+        <%= f.password_field :password, class: "form-control shadow rounded", placeholder: "Choose a password" %>
+      </div>
+    </div>
+
+    <div class="form-group row justify-content-center">
+      <%= f.submit class: "btn btn-outline-light btn-lg" %>
+    </div>
+  <% end %>
+
+  <div class="ui attached message">
+    <div class="header">
+      Welcome to our site!
+    </div>
+    <p>Fill out the form below to sign-up for a new account</p>
+  </div>
+  <form class="ui form attached fluid segment">
+    <div class="field">
+      <label>Username</label>
+      <input placeholder="Username" type="text">
+    </div>
+
+    <div class="field">
+      <label>Password</label>
+      <input type="password">
+    </div>
+    <div class="inline field">
+      <div class="ui checkbox">
+        <input type="checkbox" id="terms">
+        <label for="terms">I agree to the terms and conditions</label>
+      </div>
+    </div>
+    <div class="ui blue submit button">Submit</div>
+  </form>
+  <div class="ui bottom attached warning message">
+    <i class="icon help"></i>
+    Already signed up? <a href="#"><%= link_to 'Login Here', login_path %></a> instead.
+  </div>
+</div>
+
+<!--<div class="container">-->
+<!--  <div class="row justify-content-center">-->
+<!--    <div class="col-10">-->
+      <%#= render 'shared/errors', obj: @user %>
+      <%#= form_with(model: @user, class: "shadow p-3 mb-3 bg-info rounded", local: true) do |f| %>
+<!--        <div class="form-group row">-->
+          <%#= f.label :username, class: "col-2 col-form-label text-light" %>
+<!--          <div class="col-10">-->
+            <%#= f.text_field :username, class: "form-control shadow rounded", placeholder: "Enter a username" %>
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="form-group row">-->
+          <%#= f.label :email, class: "col-2 col-form-label text-light" %>
+<!--          <div class="col-10">-->
+            <%#= f.email_field :email, class: "form-control shadow rounded", placeholder: "Enter your email address" %>
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="form-group row">-->
+          <%#= f.label :password, class: "col-2 col-form-label text-light" %>
+<!--          <div class="col-10">-->
+            <%#= f.password_field :password, class: "form-control shadow rounded", placeholder: "Choose a password" %>
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="form-group row justify-content-center">-->
+          <%#= f.submit(@user.new_record? ? "Sign Up" : "Update Account", class: "btn btn-outline-light btn-lg") %>
+<!--        </div>-->
+      <%# end %>
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
