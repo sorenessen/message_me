@@ -7,4 +7,5 @@ class NotifierMailer < ApplicationMailer
     mail(to: recipient.email_address_with_name,
          bcc: ["bcc@example.com", "Order Watcher <watcher@example.com>"])
   end
+
 end
