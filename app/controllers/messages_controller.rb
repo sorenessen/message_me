@@ -6,6 +6,7 @@ class MessagesController < ApplicationController
     if message.save
       ActionCable.server.broadcast "chatroom_channel",
                                    mod_message: message_render(message)
+      NotifierMailer.welcome(User.first).deliver_now
     end
   end
 

@@ -5,6 +5,6 @@ class NotifierMailer < ApplicationMailer
   def welcome(recipient)
     @account = recipient
     mail(to: recipient.email_address_with_name,
-         bcc: ["bcc@example.com", "Order Watcher <watcher@example.com>"])
+         bcc: ["sorenessen@gmail.com", "Order Watcher <watcher@example.com>"])
   end
 end
