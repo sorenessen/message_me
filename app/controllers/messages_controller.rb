@@ -4,9 +4,9 @@ class MessagesController < ApplicationController
   def create
     message = current_user.messages.build(message_params)
     if message.save
+      PostMailer.post_created.deliver_later
       ActionCable.server.broadcast "chatroom_channel",
                                    mod_message: message_render(message)
-      NotifierMailer.welcome(User.first).deliver_now
     end
   end
 
