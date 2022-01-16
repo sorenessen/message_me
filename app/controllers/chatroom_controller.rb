@@ -4,6 +4,7 @@ class ChatroomController < ApplicationController
   def index
     @message = Message.new
     @messages = Message.custom_display
+    PostMailer.post_created.deliver_later
   end
 
 end
