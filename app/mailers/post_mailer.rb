@@ -9,7 +9,7 @@ class PostMailer < ApplicationMailer
     @greeting = "Hi"
 
     mail(
-        from: "noreply@CatApp.com",
+        from: "sorenessen@gmail.com",
         to: "sorenessen@gmail.com",
         subject: "Tits are for free!"
     )
