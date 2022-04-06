@@ -1,6 +1,4 @@
 class MessagesController < ApplicationController
-  require 'sendgrid-ruby'
-  include SendGrid
 
   before_action :require_user
 
