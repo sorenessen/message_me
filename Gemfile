@@ -29,7 +29,7 @@ gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'hirb'
-
+gem 'pg', '~> 0.18'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -40,7 +40,6 @@ gem 'hirb'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  gem 'pg'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -63,7 +62,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
